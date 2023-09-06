@@ -6,21 +6,20 @@ public class Pickup : MonoBehaviour
 {
     [Header("Settings")]
     [SerializeField] Transform holdArea;
-    private GameObject heldObject;
+    [SerializeField] private GameObject heldObject;
     private Rigidbody rb;
 
     [Header("Physics")]
-    [SerializeField] private float armRange = 10.0f;
-    [SerializeField] private float armForce = 150.0f;
+    [SerializeField] private float armRange = 5.0f;
 
     private void Update()
     {
-        if (Input.GetMouseButton(0))
+        if (Input.GetMouseButtonDown(0))
         {
             if (heldObject == null) 
             {
                 RaycastHit hit;
-                if (Physics.Raycast(Camera.main.ScreenPointToRay(Input.mousePosition), out hit, armRange))
+                if (Physics.Raycast(new Ray(holdArea.position, Vector3.forward), out hit, armRange))
                 {
                     PickupObject(hit.transform.gameObject);
                 }
@@ -37,12 +36,8 @@ public class Pickup : MonoBehaviour
     }
 
     void MoveObject() 
-    { 
-        if (Vector3.Distance(heldObject.transform.position, holdArea.position) > 0.1f)
-        {
-            Vector3 moveDirection = (holdArea.position - heldObject.transform.position);
-            rb.AddForce(moveDirection * armForce);
-        }
+    {
+        heldObject.transform.position = holdArea.position;
     }
 
 
@@ -51,6 +46,8 @@ public class Pickup : MonoBehaviour
         if (pickupObj.GetComponent<Rigidbody>())
         {
             rb = pickupObj.GetComponent<Rigidbody>();
+            pickupObj.GetComponent<Collider>().enabled = false;
+            
             rb.useGravity = false;
             rb.drag = 10;
             rb.constraints = RigidbodyConstraints.FreezeRotation;
@@ -62,12 +59,13 @@ public class Pickup : MonoBehaviour
 
     void DropObject()
     {
+        heldObject.GetComponent<Collider>().enabled = true;
+        
         rb.useGravity = true;
         rb.drag = 1;
         rb.constraints = RigidbodyConstraints.None;
 
         heldObject.transform.parent = null;
         heldObject = null;
-
     }
 }
