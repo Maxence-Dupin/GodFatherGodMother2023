@@ -1,12 +1,11 @@
 using UnityEngine;
 
-public class Pickup : MonoBehaviour
+public class PickupLeft : MonoBehaviour
 {
     [Header("Settings")]
     [SerializeField] Transform holdArea;
-    [SerializeField] private GameObject heldObject;
+    private GameObject heldObject;
     private Rigidbody rb;
-
     [Header("Physics")]
     [SerializeField] private float armRange = 5.0f;
 
