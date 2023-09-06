@@ -5,6 +5,7 @@ using UnityEngine;
 public class DeplacementBrasDroit : MonoBehaviour
 {
     public GameObject BrasDroit;
+    public Rigidbody rb;
     public float VitesseBrasY=1;
     public float VitesseBrasZ=1;
     public float VitesseBrasX=1;
@@ -19,27 +20,27 @@ public class DeplacementBrasDroit : MonoBehaviour
     {
         if (Input.GetKey(KeyCode.Keypad8))
         {
-            transform.Translate(0, Time.deltaTime * VitesseBrasY, 0 );
+            rb.AddForce(Vector3.up * VitesseBrasZ);
         }
         if (Input.GetKey(KeyCode.Keypad5))
         {
-            transform.Translate(0, Time.deltaTime * -VitesseBrasY, 0);
+            rb.AddForce(Vector3.down * VitesseBrasZ);
         }
         if (Input.GetKey(KeyCode.Keypad4))
         {
-            transform.Translate(Time.deltaTime * -VitesseBrasX, 0 , 0);
+            rb.AddForce(Vector3.left * VitesseBrasX);
         }
         if (Input.GetKey(KeyCode.Keypad6))
         {
-            transform.Translate(Time.deltaTime * VitesseBrasX, 0, 0);
+            rb.AddForce(Vector3.right * VitesseBrasX);
         }
         if (Input.GetKey(KeyCode.KeypadPlus))
         {
-            transform.Translate(0 , 0, Time.deltaTime * VitesseBrasZ);
+            rb.AddForce(Vector3.forward * VitesseBrasY);
         }
         if (Input.GetKey(KeyCode.KeypadMinus))
         {
-            transform.Translate(0, 0, Time.deltaTime * -VitesseBrasZ);
+            rb.AddForce(Vector3.back * VitesseBrasY);
         }
     }
 }

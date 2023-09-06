@@ -20,27 +20,27 @@ public class DeplacementBrasGauche : MonoBehaviour
     {
         if (Input.GetKey(KeyCode.UpArrow))
         {
-            rb.AddForce(Vector3.forward);
+            rb.AddForce(Vector3.up* VitesseBrasZ);
         }
         if (Input.GetKey(KeyCode.DownArrow))
         {
-            rb.AddForce(-Vector3.forward);
+            rb.AddForce(Vector3.down* VitesseBrasZ);
         }
         if (Input.GetKey(KeyCode.LeftArrow))
         {
-            transform.Translate(Time.deltaTime * -VitesseBrasX, 0 , 0);
+            rb.AddForce(Vector3.left* VitesseBrasX);
         }
         if (Input.GetKey(KeyCode.RightArrow))
         {
-            transform.Translate(Time.deltaTime * VitesseBrasX, 0, 0);
+            rb.AddForce(Vector3.right* VitesseBrasX);
         }
         if (Input.GetKey(KeyCode.Z))
         {
-            transform.Translate(0 , 0, Time.deltaTime * VitesseBrasZ);
+            rb.AddForce(Vector3.forward * VitesseBrasY);
         }
         if (Input.GetKey(KeyCode.S))
         {
-            transform.Translate( 0, 0, Time.deltaTime * -VitesseBrasZ);
+            rb.AddForce(Vector3.back * VitesseBrasY);
         }
     }
 }
