@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 4090681599697516819}
   - component: {fileID: 5916252237824942607}
   m_Layer: 0
-  m_Name: Sphere (1)
+  m_Name: Sphere
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -396,8 +396,8 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0.3, y: 0, z: 0.6}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
+  m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 8560941710186617544}
   - {fileID: 9179749763335762084}
@@ -445,7 +445,7 @@ Rigidbody:
   m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 112
   m_CollisionDetection: 0
 --- !u!114 &3278245545901793995
 MonoBehaviour:
@@ -459,9 +459,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c2e5be94819d9b44ba91498a14e72472, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  holdArea: {fileID: 6564639457656203001}
-  armRange: 10
-  armForce: 150
+  holdArea: {fileID: 9179749763335762084}
+  heldObject: {fileID: 0}
+  armRange: 5
 --- !u!1 &4587110401546935712
 GameObject:
   m_ObjectHideFlags: 0
@@ -522,8 +522,8 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -0.3, y: 0, z: 0.6}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
+  m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 5482824047299578709}
   - {fileID: 6734635503327510772}
@@ -571,7 +571,7 @@ Rigidbody:
   m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 112
   m_CollisionDetection: 0
 --- !u!114 &3501325284567811192
 MonoBehaviour:
@@ -585,6 +585,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c2e5be94819d9b44ba91498a14e72472, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  holdArea: {fileID: 7897577762600536164}
+  holdArea: {fileID: 6734635503327510772}
+  heldObject: {fileID: 0}
   armRange: 10
-  armForce: 150

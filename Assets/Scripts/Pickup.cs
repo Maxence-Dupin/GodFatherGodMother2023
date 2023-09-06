@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class Pickup : MonoBehaviour
@@ -64,6 +62,8 @@ public class Pickup : MonoBehaviour
         rb.useGravity = true;
         rb.drag = 1;
         rb.constraints = RigidbodyConstraints.None;
+
+        rb.velocity = GetComponent<Rigidbody>().velocity;
 
         heldObject.transform.parent = null;
         heldObject = null;
