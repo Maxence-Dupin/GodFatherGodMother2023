@@ -42,7 +42,7 @@ public class Pickup : MonoBehaviour
 
     void PickupObject (GameObject pickupObj)
     {
-        if (pickupObj.GetComponent<Rigidbody>() && !pickupObj.CompareTag("HandLeft") && !pickupObj.CompareTag("HandLeft"))
+        if (pickupObj.GetComponent<Rigidbody>() && !pickupObj.CompareTag("HandLeft") && !pickupObj.CompareTag("HandRight"))
         {
             rb = pickupObj.GetComponent<Rigidbody>();
             pickupObj.GetComponent<Collider>().enabled = false;
