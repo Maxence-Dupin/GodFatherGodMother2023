@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 5916252237824942607}
   m_Layer: 0
   m_Name: Sphere
-  m_TagString: Hands
+  m_TagString: HandLeft
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -119,7 +119,7 @@ GameObject:
   - component: {fileID: 1419824524332677341}
   m_Layer: 0
   m_Name: Sphere
-  m_TagString: Hands
+  m_TagString: HandRight
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -381,7 +381,7 @@ GameObject:
   - component: {fileID: 3278245545901793995}
   m_Layer: 0
   m_Name: Bras Droit
-  m_TagString: Untagged
+  m_TagString: HandRight
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -417,9 +417,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   BrasDroit: {fileID: 3312933394905215289}
   rb: {fileID: 4709068953343321151}
-  VitesseBrasY: 3
-  VitesseBrasZ: 3
-  VitesseBrasX: 3
+  VitesseBrasY: 1
+  VitesseBrasZ: 1
+  VitesseBrasX: 1
 --- !u!54 &4709068953343321151
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -507,7 +507,7 @@ GameObject:
   - component: {fileID: 3501325284567811192}
   m_Layer: 0
   m_Name: Bras Gauche
-  m_TagString: Untagged
+  m_TagString: HandLeft
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -543,9 +543,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   BrasGauche: {fileID: 8608036983565455800}
   rb: {fileID: 298829450875066437}
-  VitesseBrasY: 3
-  VitesseBrasZ: 3
-  VitesseBrasX: 3
+  VitesseBrasY: 1
+  VitesseBrasZ: 1
+  VitesseBrasX: 1
 --- !u!54 &298829450875066437
 Rigidbody:
   m_ObjectHideFlags: 0

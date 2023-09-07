@@ -40,10 +40,9 @@ public class Pickup : MonoBehaviour
         heldObject.transform.position = holdArea.position;
     }
 
-
     void PickupObject (GameObject pickupObj)
     {
-        if (pickupObj.GetComponent<Rigidbody>())
+        if (pickupObj.GetComponent<Rigidbody>() && !pickupObj.CompareTag("HandLeft") && !pickupObj.CompareTag("HandLeft"))
         {
             rb = pickupObj.GetComponent<Rigidbody>();
             pickupObj.GetComponent<Collider>().enabled = false;
