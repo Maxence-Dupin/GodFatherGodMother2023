@@ -5,15 +5,19 @@ using UnityEngine;
 public class TéléportationPlat : MonoBehaviour
 {
     // Start is called before the first frame update
+    public RecetteFini RecetteFini;
     void Start()
     {
         
     }
-    public void OnCollisionEnter(Collision collision)
+    public void OnTriggerEnter(Collider collider)
     {
+        StartCoroutine(EndGame());
         IEnumerator EndGame()
         {
-
+            yield return new WaitForSeconds(5);
+            RecetteFini.FinRecette = true;
+            
         }
     }
     // Update is called once per frame

@@ -12,7 +12,7 @@ public class PanelFin : MonoBehaviour
     
     void Update()
     {
-        if (RecetteFini.FinRecette)
+        if (RecetteFini.FinRecette==true)
         {
             Canva.SetActive(true);
         }
