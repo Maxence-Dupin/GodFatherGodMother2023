@@ -1,18 +1,20 @@
 using UnityEngine;
 
-public class NewBehaviourScript : MonoBehaviour
+public class Bowl : MonoBehaviour
 {
     #region Fields
 
     private int _step = 0;
 
-    private bool _isSuccess;
+    private bool _ingredientsInGoodOrder = true;
 
     #endregion
 
     #region Properties
 
-    private bool IsSuccess => _isSuccess;
+    public bool IngredientsInGoodOrder => _ingredientsInGoodOrder;
+
+    public float TimingFour { get; set; } = 0f;
 
     #endregion
     
@@ -34,7 +36,7 @@ public class NewBehaviourScript : MonoBehaviour
         }
         else
         {
-            _isSuccess = false;
+            _ingredientsInGoodOrder = false;
         }
     }
 

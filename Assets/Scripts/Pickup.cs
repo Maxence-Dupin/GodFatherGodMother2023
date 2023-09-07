@@ -1,9 +1,11 @@
 using UnityEngine;
 
-public class PickupLeft : MonoBehaviour
+public class Pickup : MonoBehaviour
 {
     [Header("Settings")]
     [SerializeField] Transform holdArea;
+    [SerializeField] private bool _leftArm;
+    
     private GameObject heldObject;
     private Rigidbody rb;
     [Header("Physics")]
@@ -11,7 +13,8 @@ public class PickupLeft : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetMouseButtonDown(0))
+        if ((_leftArm && Input.GetKeyDown(InputManager.Instance.LeftJoystickButton1)) 
+        || (!_leftArm && Input.GetKeyDown(InputManager.Instance.RightJoystickButton1)))
         {
             if (heldObject == null) 
             {
@@ -54,7 +57,7 @@ public class PickupLeft : MonoBehaviour
         }
     }
 
-    void DropObject()
+    public void DropObject()
     {
         heldObject.GetComponent<Collider>().enabled = true;
         
