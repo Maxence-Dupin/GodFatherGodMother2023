@@ -8,9 +8,9 @@ public class Ingredient : MonoBehaviour
     {
         Egg = 0,
         Flour = 1,
-        Fruit1 = 2,
-        Fruit2 = 3,
-        Fruit3 = 4,
+        Fruit1 = 3,
+        Fruit2 = 4,
+        Fruit3 = 5,
     }
 
     #endregion

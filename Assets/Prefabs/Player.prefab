@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 5916252237824942607}
   m_Layer: 0
   m_Name: Sphere
-  m_TagString: Untagged
+  m_TagString: HandLeft
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -119,7 +119,7 @@ GameObject:
   - component: {fileID: 1419824524332677341}
   m_Layer: 0
   m_Name: Sphere
-  m_TagString: Untagged
+  m_TagString: HandRight
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -378,10 +378,10 @@ GameObject:
   - component: {fileID: 6564639457656203001}
   - component: {fileID: 3043795304002127028}
   - component: {fileID: 4709068953343321151}
-  - component: {fileID: 3278245545901793995}
+  - component: {fileID: 8694347440455234813}
   m_Layer: 0
   m_Name: Bras Droit
-  m_TagString: Untagged
+  m_TagString: HandRight
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -417,9 +417,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   BrasDroit: {fileID: 3312933394905215289}
   rb: {fileID: 4709068953343321151}
-  VitesseBrasY: 3
-  VitesseBrasZ: 3
-  VitesseBrasX: 3
+  VitesseBrasY: 1
+  VitesseBrasZ: 1
+  VitesseBrasX: 1
 --- !u!54 &4709068953343321151
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -447,7 +447,7 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 112
   m_CollisionDetection: 0
---- !u!114 &3278245545901793995
+--- !u!114 &8694347440455234813
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -460,7 +460,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   holdArea: {fileID: 9179749763335762084}
-  heldObject: {fileID: 0}
+  _leftArm: 0
   armRange: 5
 --- !u!1 &4587110401546935712
 GameObject:
@@ -504,10 +504,10 @@ GameObject:
   - component: {fileID: 7897577762600536164}
   - component: {fileID: 2114960118338969287}
   - component: {fileID: 298829450875066437}
-  - component: {fileID: 3501325284567811192}
+  - component: {fileID: 8054572781041926043}
   m_Layer: 0
   m_Name: Bras Gauche
-  m_TagString: Untagged
+  m_TagString: HandLeft
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -543,9 +543,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   BrasGauche: {fileID: 8608036983565455800}
   rb: {fileID: 298829450875066437}
-  VitesseBrasY: 3
-  VitesseBrasZ: 3
-  VitesseBrasX: 3
+  VitesseBrasY: 1
+  VitesseBrasZ: 1
+  VitesseBrasX: 1
 --- !u!54 &298829450875066437
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -573,7 +573,7 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 112
   m_CollisionDetection: 0
---- !u!114 &3501325284567811192
+--- !u!114 &8054572781041926043
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -586,5 +586,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   holdArea: {fileID: 6734635503327510772}
-  heldObject: {fileID: 0}
-  armRange: 10
+  _leftArm: 1
+  armRange: 5
