@@ -8,7 +8,13 @@ public class Four : MonoBehaviour
     [SerializeField] private Rigidbody _bowlRb;
     [SerializeField] private BoxCollider _bowlTrigger;
     [SerializeField] private Transform _bowlInTransform;
-    [SerializeField] private Transform _bowlOutTransform;
+
+    [SerializeField] AudioClip FourClose;
+    [SerializeField] AudioClip FourOpen;
+    [SerializeField] AudioClip FourON;
+    [SerializeField] AudioClip FourOFF;
+    [SerializeField] AudioClip FourExplosion;
+    [SerializeField] AudioClip FourEnd;
 
     private bool open;
     
@@ -16,12 +22,15 @@ public class Four : MonoBehaviour
 
     [SerializeField] private GameObject _fire;
 
+    [SerializeField] private Transform _bowlOutTransform;
+
     private bool _leftHandInTrigger;
     private bool _rightHandInTrigger;
     private bool _bowlIn;
     private bool _closed;
     private bool _onFire;
 
+    private bool _SFXEnd;
     private float _timer;
 
     #endregion
@@ -33,12 +42,25 @@ public class Four : MonoBehaviour
         if (Input.GetKeyDown(InputManager.Instance.RedButton))
         {
             _closed = !_closed;
+            if (_closed)
+            {
+                AudioManager.Instance.ChangerAudio(FourClose);
+            }
+            else
+            {
+                AudioManager.Instance.ChangerAudio(FourOpen);
+            }
         }
         
         if (_bowlIn && _closed)
         {
             _bowl.TimingFour += Time.deltaTime;
             _timer += Time.deltaTime;
+            if(_timer>5 && _SFXEnd == false)
+            {
+                AudioManager.Instance.ChangerAudio(FourEnd);
+                _SFXEnd = true;
+            }
         }
 
         if (_bowlIn && !_closed && 
