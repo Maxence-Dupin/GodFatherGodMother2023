@@ -54,7 +54,6 @@ public class Pickup : MonoBehaviour
             
             rb.useGravity = false;
             rb.drag = 10;
-            rb.constraints = RigidbodyConstraints.FreezeRotation;
 
             rb.transform.parent = holdArea;
             heldObject = pickupObj;
@@ -67,7 +66,6 @@ public class Pickup : MonoBehaviour
         
         rb.useGravity = true;
         rb.drag = 1;
-        rb.constraints = RigidbodyConstraints.None;
 
         rb.velocity = GetComponent<Rigidbody>().velocity;
 
