@@ -6,8 +6,8 @@ public class Ingredient : MonoBehaviour
 
     public enum IngredientType
     {
-        Egg = 0,
-        Flour = 1,
+        Flour = 0,
+        Sugar = 1,
         Fruit1 = 3,
         Fruit2 = 4,
         Fruit3 = 5,

@@ -16,8 +16,8 @@ public class Four : MonoBehaviour
 
     [SerializeField] private GameObject _fire;
 
-    [SerializeField] private bool _leftHandInTrigger;
-    [SerializeField] private bool _rightHandInTrigger;
+    private bool _leftHandInTrigger;
+    private bool _rightHandInTrigger;
     private bool _bowlIn;
     private bool _closed;
     private bool _onFire;

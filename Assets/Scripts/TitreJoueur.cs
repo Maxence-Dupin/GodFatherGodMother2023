@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 
@@ -9,6 +7,7 @@ public class TitreJoueur : MonoBehaviour
 
     public void NomJoueur(string titre)
     {
+        
         texteMeshPro.text = titre;
     }
 }
