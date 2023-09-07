@@ -8,11 +8,17 @@ public class Bowl : MonoBehaviour
 
     private bool _ingredientsInGoodOrder = true;
 
+    private bool _melangeageReussi;
+
     #endregion
 
     #region Properties
 
     public bool IngredientsInGoodOrder => _ingredientsInGoodOrder;
+
+    public bool MelangeageReussi => _melangeageReussi;
+
+    public bool CuissonReussi => TimingFour is >= 5 and <= 10;
 
     public float TimingFour { get; set; } = 0f;
 

@@ -44,9 +44,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f7ec8d63748cac0428a564f22d5c20af, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _leftJoystickButton1: 0
+  _leftJoystickButton1: 323
   _leftJoystickButton2: 0
-  _rightJoystickButton1: 0
+  _rightJoystickButton1: 324
   _rightJoystickButton2: 0
   _middleButton: 0
   _upArrow: 0
@@ -55,9 +55,9 @@ MonoBehaviour:
   _rightArrow: 0
   _redButton: 0
   _blueButton: 0
-  _button1_1: 101
-  _button1_2: 0
-  _button1_3: 0
+  _button1_1: 257
+  _button1_2: 258
+  _button1_3: 259
   _button2_1: 0
   _button2_2: 0
   _button2_3: 0

@@ -13,6 +13,7 @@ public class Pickup : MonoBehaviour
     private bool bowl, whisk = false;
     [Header("Physics")]
     [SerializeField] private float armRange = 5.0f;
+    [SerializeField] AudioClip PickUp;
 
     private void Update()
     {
@@ -47,6 +48,7 @@ public class Pickup : MonoBehaviour
     {
         if (pickupObj.GetComponent<Rigidbody>() && !pickupObj.CompareTag("HandLeft") && !pickupObj.CompareTag("HandRight"))
         {
+            AudioManager.Instance.ChangerAudio(PickUp);
             rb = pickupObj.GetComponent<Rigidbody>();
             pickupObj.GetComponent<Collider>().enabled = false;
             

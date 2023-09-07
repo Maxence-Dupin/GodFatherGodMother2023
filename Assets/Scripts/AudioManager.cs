@@ -13,6 +13,7 @@ public class AudioManager : MonoBehaviour
     public void ChangerAudio(AudioClip Audio)
     {
         AudioSource.clip = Audio;
+        AudioSource.Play();
     }
 
     
