@@ -16,8 +16,8 @@ public class Four : MonoBehaviour
 
     [SerializeField] private GameObject _fire;
 
-    private bool _leftHandInTrigger;
-    private bool _rightHandInTrigger;
+    [SerializeField] private bool _leftHandInTrigger;
+    [SerializeField] private bool _rightHandInTrigger;
     private bool _bowlIn;
     private bool _closed;
     private bool _onFire;
@@ -87,7 +87,7 @@ public class Four : MonoBehaviour
         
         if (other.CompareTag("HandRight"))
         {
-            _leftHandInTrigger = true;
+            _rightHandInTrigger = true;
         }
     }
     
@@ -100,7 +100,7 @@ public class Four : MonoBehaviour
         
         if (other.CompareTag("HandRight"))
         {
-            _leftHandInTrigger = false;
+            _rightHandInTrigger = false;
         }
     }
 
