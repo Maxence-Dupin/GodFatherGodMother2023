@@ -378,6 +378,7 @@ GameObject:
   - component: {fileID: 6564639457656203001}
   - component: {fileID: 3043795304002127028}
   - component: {fileID: 4709068953343321151}
+  - component: {fileID: 8694347440455234813}
   m_Layer: 0
   m_Name: Bras Droit
   m_TagString: HandRight
@@ -446,6 +447,21 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 112
   m_CollisionDetection: 0
+--- !u!114 &8694347440455234813
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3312933394905215289}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c2e5be94819d9b44ba91498a14e72472, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  holdArea: {fileID: 9179749763335762084}
+  _leftArm: 0
+  armRange: 5
 --- !u!1 &4587110401546935712
 GameObject:
   m_ObjectHideFlags: 0
@@ -488,6 +504,7 @@ GameObject:
   - component: {fileID: 7897577762600536164}
   - component: {fileID: 2114960118338969287}
   - component: {fileID: 298829450875066437}
+  - component: {fileID: 8054572781041926043}
   m_Layer: 0
   m_Name: Bras Gauche
   m_TagString: HandLeft
@@ -556,3 +573,18 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 112
   m_CollisionDetection: 0
+--- !u!114 &8054572781041926043
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8608036983565455800}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c2e5be94819d9b44ba91498a14e72472, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  holdArea: {fileID: 6734635503327510772}
+  _leftArm: 1
+  armRange: 5
