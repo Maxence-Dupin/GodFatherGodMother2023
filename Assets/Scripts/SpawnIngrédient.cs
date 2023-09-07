@@ -1,24 +1,14 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UIElements;
 
 public class SpawnIngrédient : MonoBehaviour
 {
-    // Start is called before the first frame update
     public GameObject Fruit1;
     public GameObject Fruit2;
     public GameObject Fruit3;
     [SerializeField] Transform SpawnPoint1;
     [SerializeField] Transform SpawnPoint2;
     [SerializeField] Transform SpawnPoint3;
-    void Start()
-    {
-        
-
-    }
-
-    // Update is called once per frame
+    
     void Update()
     {
         if (Input.GetKeyDown(InputManager.Instance.Button1_1))
