@@ -7,6 +7,8 @@ TagManager:
   - Hands
   - HandLeft
   - HandRight
+  - Bowl
+  - Whisk
   layers:
   - Default
   - TransparentFX

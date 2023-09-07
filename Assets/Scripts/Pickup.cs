@@ -8,6 +8,9 @@ public class Pickup : MonoBehaviour
     
     private GameObject heldObject;
     private Rigidbody rb;
+
+    public Minigame minigame;
+    private bool bowl, whisk = false;
     [Header("Physics")]
     [SerializeField] private float armRange = 5.0f;
 
@@ -68,5 +71,47 @@ public class Pickup : MonoBehaviour
 
         heldObject.transform.parent = null;
         heldObject = null;
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.CompareTag("Bowl"))
+        {
+            bowl = true;
+            if (whisk) 
+            {
+                if (_leftArm)
+                    minigame.StartMix(true);
+                else
+                    minigame.StartMix(false);
+
+
+            }
+        }
+        if (other.CompareTag("Whisk"))
+        {
+            whisk = true;
+            if (bowl) 
+            {
+                if (_leftArm)
+                    minigame.StartMix(true);
+                else
+                    minigame.StartMix(false);
+            }
+        }
+    }
+
+    private void OnTriggerExit(Collider other)
+    {
+        {
+            if (other.CompareTag("Bowl"))
+            {
+                bowl = false;
+            }
+            if (other.CompareTag("Whisk"))
+            {
+                whisk = false;
+            }
+        }
     }
 }

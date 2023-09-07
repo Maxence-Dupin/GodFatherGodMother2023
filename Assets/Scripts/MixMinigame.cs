@@ -7,9 +7,14 @@ using TMPro;
 public class Minigame : MonoBehaviour
 {
     [SerializeField] Slider slider;
+    [SerializeField] Slider sliderBalance;
     [SerializeField] TMP_Text meter;
+    [SerializeField] GameObject ui;
 
-    private bool countdownStart, up, left, right, down = false;
+    public DeplacementBrasDroit droit;
+    public DeplacementBrasGauche gauche;
+
+    private bool playerLeft, countdownStart, up, left, right, down = false;
 
     private float countdown = 10.0f;
 
@@ -17,102 +22,152 @@ public class Minigame : MonoBehaviour
     {
         slider.maxValue = 100;
         slider.value = 0;
+        sliderBalance.maxValue = 80;
+        sliderBalance.value = 40;
     }
 
     void Update()
     {
+        //reset timer
         if (!countdownStart && countdown != 10.0f)
         {
             countdown = 10.0f;
         }
 
+        //update
         if (countdownStart)
         {
+            sliderBalance.value += Time.deltaTime * Random.Range(-150, 150);
             countdown -= Time.deltaTime;
-            meter.text = countdown.ToString();
+            meter.text = countdown.ToString("F1");
+            droit.GetComponent<DeplacementBrasDroit>().enabled = false;
+            gauche.GetComponent<DeplacementBrasGauche>().enabled = false;
         }
 
         #region Player Left
-        if (Input.GetKeyDown(KeyCode.UpArrow) && countdown > 0)
+        if (playerLeft)
         {
-            if (!up && !down)
+            if (Input.GetKeyDown(KeyCode.UpArrow) && countdown > 0)
             {
-                Up();
-                SetCharge();
+                if (!up && !down)
+                {
+                    Up();
+                    SetCharge();
+                }
             }
-        }
-        if (Input.GetKeyDown(KeyCode.LeftArrow) && countdown > 0)
-        {
-            if (!left && !right)
+            if (Input.GetKeyDown(KeyCode.LeftArrow) && countdown > 0)
             {
-                Left();
-                SetCharge();
+                if (!left && !right)
+                {
+                    Left();
+                    SetCharge();
+                }
             }
-        }
-        if (Input.GetKeyDown(KeyCode.RightArrow) && countdown > 0)
-        {
-            if (!left && !right)
+            if (Input.GetKeyDown(KeyCode.RightArrow) && countdown > 0)
             {
-                Right();
-                SetCharge();
+                if (!left && !right)
+                {
+                    Right();
+                    SetCharge();
+                }
             }
-        }
-        if (Input.GetKeyDown(KeyCode.DownArrow) && countdown > 0)
-        {
-            if (!up && !down)
+            if (Input.GetKeyDown(KeyCode.DownArrow) && countdown > 0)
             {
-                Down();
-                SetCharge();
+                if (!up && !down)
+                {
+                    Down();
+                    SetCharge();
+                }
+            }
+
+            if (Input.GetKeyDown(KeyCode.Keypad4) && countdownStart) 
+            {
+                sliderBalance.value -= 5;
+            }
+            if (Input.GetKeyDown(KeyCode.Keypad6) && countdownStart)
+            {
+                sliderBalance.value += 5;
             }
         }
         #endregion
 
         #region Player Right
-        if (Input.GetKeyDown(KeyCode.UpArrow) && countdown > 0)
+        if (!playerLeft)
         {
-            if (!up && !down)
+            if (Input.GetKeyDown(KeyCode.Keypad8) && countdown > 0)
             {
-                Up();
-                SetCharge();
+                if (!up && !down)
+                {
+                    Up();
+                    SetCharge();
+                }
             }
-        }
-        if (Input.GetKeyDown(KeyCode.LeftArrow) && countdown > 0)
-        {
-            if (!left && !right)
+            if (Input.GetKeyDown(KeyCode.Keypad4) && countdown > 0)
             {
-                Left();
-                SetCharge();
+                if (!left && !right)
+                {
+                    Left();
+                    SetCharge();
+                }
             }
-        }
-        if (Input.GetKeyDown(KeyCode.RightArrow) && countdown > 0)
-        {
-            if (!left && !right)
+            if (Input.GetKeyDown(KeyCode.Keypad6) && countdown > 0)
             {
-                Right();
-                SetCharge();
+                if (!left && !right)
+                {
+                    Right();
+                    SetCharge();
+                }
             }
-        }
-        if (Input.GetKeyDown(KeyCode.DownArrow) && countdown > 0)
-        {
-            if (!up && !down)
+            if (Input.GetKeyDown(KeyCode.Keypad5) && countdown > 0)
             {
-                Down();
-                SetCharge();
+                if (!up && !down)
+                {
+                    Down();
+                    SetCharge();
+                }
+            }
+
+            if (Input.GetKeyDown(KeyCode.LeftArrow) && countdownStart)
+            {
+                sliderBalance.value -= 5;
+            }
+            if (Input.GetKeyDown(KeyCode.RightArrow) && countdownStart)
+            {
+                sliderBalance.value += 5;
             }
         }
         #endregion
 
-        if (countdown <= 0 && countdownStart)
+        //win
+        if (slider.value >= 100)
         {
             countdownStart = false;
-            Debug.Log("fail");
+            droit.GetComponent<DeplacementBrasDroit>().enabled = true;
+            gauche.GetComponent<DeplacementBrasGauche>().enabled = true;
+            ui.SetActive(false);
+        }
+
+        //fail
+        if ((countdown <= 0 || sliderBalance.value <= 0 || sliderBalance.value >= 100) && countdownStart)
+        {
+            countdownStart = false;
+            droit.GetComponent<DeplacementBrasDroit>().enabled = true;
+            gauche.GetComponent<DeplacementBrasGauche>().enabled = true;
+            ui.SetActive(false);
         }
 
     }
 
+    //Start
     public void StartMix(bool isLeft)
     {
+        if (isLeft)
+            playerLeft = true;
+        else
+            playerLeft = false;
 
+        ui.SetActive(true);
+        countdownStart = true;
     }
 
     void SetCharge()
