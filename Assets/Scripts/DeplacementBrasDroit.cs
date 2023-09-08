@@ -16,27 +16,27 @@ public class DeplacementBrasDroit : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
-        if (Input.GetKey(KeyCode.Keypad8))
+        if (Input.GetKey(InputManager.Instance.RightJoystickUp))
         {
             rb.AddForce(Vector3.up * VitesseBrasZ);
         }
-        if (Input.GetKey(KeyCode.Keypad5))
+        if (Input.GetKey(InputManager.Instance.RightJoystickBottom))
         {
             rb.AddForce(Vector3.down * VitesseBrasZ);
         }
-        if (Input.GetKey(KeyCode.Keypad4))
+        if (Input.GetKey(InputManager.Instance.RightJoystickLeft))
         {
             rb.AddForce(Vector3.left * VitesseBrasX);
         }
-        if (Input.GetKey(KeyCode.Keypad6))
+        if (Input.GetKey(InputManager.Instance.RightJoystickRight))
         {
             rb.AddForce(Vector3.right * VitesseBrasX);
         }
-        if (Input.GetKey(KeyCode.KeypadPlus))
+        if (Input.GetKey(InputManager.Instance.RightJoystickProfondeurUp))
         {
             rb.AddForce(Vector3.forward * VitesseBrasY);
         }
-        if (Input.GetKey(KeyCode.KeypadMinus))
+        if (Input.GetKey(InputManager.Instance.RightJoystickProfondeurBottom))
         {
             rb.AddForce(Vector3.back * VitesseBrasY);
         }

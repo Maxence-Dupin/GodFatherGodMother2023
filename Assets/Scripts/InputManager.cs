@@ -4,6 +4,18 @@ public class InputManager : MonoBehaviour
 {
     #region Fields
 
+    [SerializeField] private KeyCode _leftJoystickProfondeurUp;
+    [SerializeField] private KeyCode _leftJoystickProfondeurBottom;
+    [SerializeField] private KeyCode _leftJoystickUp;
+    [SerializeField] private KeyCode _leftJoystickBottom;
+    [SerializeField] private KeyCode _leftJoystickLeft;
+    [SerializeField] private KeyCode _leftJoystickRight;
+    [SerializeField] private KeyCode _rightJoystickProfondeurUp;
+    [SerializeField] private KeyCode _rightJoystickProfondeurBottom;
+    [SerializeField] private KeyCode _rightJoystickUp;
+    [SerializeField] private KeyCode _rightJoystickBottom;
+    [SerializeField] private KeyCode _rightJoystickLeft;
+    [SerializeField] private KeyCode _rightJoystickRight;
     [SerializeField] private KeyCode _leftJoystickButton1;
     [SerializeField] private KeyCode _leftJoystickButton2;
     [SerializeField] private KeyCode _rightJoystickButton1;
@@ -29,6 +41,30 @@ public class InputManager : MonoBehaviour
     #region Properties
 
     public static InputManager Instance => _instance;
+    
+    public KeyCode LeftJoystickProfondeurUp => _leftJoystickProfondeurUp;
+    
+    public KeyCode LeftJoystickProfondeurBottom => _leftJoystickProfondeurBottom;
+    
+    public KeyCode RightJoystickProfondeurUp => _rightJoystickProfondeurUp;
+    
+    public KeyCode RightJoystickProfondeurBottom => _rightJoystickProfondeurBottom;
+    
+    public KeyCode LeftJoystickUp => _leftJoystickUp;
+    
+    public KeyCode LeftJoystickBottom => _leftJoystickBottom;
+    
+    public KeyCode LeftJoystickLeft => _leftJoystickLeft;
+    
+    public KeyCode LeftJoystickRight => _leftJoystickRight;
+    
+    public KeyCode RightJoystickUp => _rightJoystickUp;
+    
+    public KeyCode RightJoystickBottom => _rightJoystickBottom;
+    
+    public KeyCode RightJoystickLeft => _rightJoystickLeft;
+    
+    public KeyCode RightJoystickRight => _rightJoystickRight;
     
     public KeyCode LeftJoystickButton1 => _leftJoystickButton1;
     

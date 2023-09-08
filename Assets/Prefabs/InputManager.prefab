@@ -44,6 +44,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f7ec8d63748cac0428a564f22d5c20af, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _leftJoystickProfondeurUp: 115
+  _leftJoystickProfondeurBottom: 122
+  _leftJoystickUp: 273
+  _leftJoystickBottom: 274
+  _leftJoystickLeft: 276
+  _leftJoystickRight: 275
+  _rightJoystickProfondeurUp: 270
+  _rightJoystickProfondeurBottom: 269
+  _rightJoystickUp: 264
+  _rightJoystickBottom: 261
+  _rightJoystickLeft: 260
+  _rightJoystickRight: 262
   _leftJoystickButton1: 323
   _leftJoystickButton2: 0
   _rightJoystickButton1: 324
