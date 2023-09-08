@@ -369,7 +369,7 @@ MonoBehaviour:
   holdArea: {fileID: 9179749763335762084}
   _leftArm: 0
   minigame: {fileID: 0}
-  armRange: 5
+  armRange: 1
   PickUp: {fileID: 8300000, guid: 6295f8c61c7301c4881117dcfce7061d, type: 3}
 --- !u!1 &4587110401546935712
 GameObject:
@@ -497,5 +497,5 @@ MonoBehaviour:
   holdArea: {fileID: 6734635503327510772}
   _leftArm: 1
   minigame: {fileID: 0}
-  armRange: 5
+  armRange: 1
   PickUp: {fileID: 8300000, guid: 6295f8c61c7301c4881117dcfce7061d, type: 3}
