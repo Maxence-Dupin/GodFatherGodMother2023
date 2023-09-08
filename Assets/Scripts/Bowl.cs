@@ -33,7 +33,7 @@ public class Bowl : MonoBehaviour
 
         if (ingredient.DestroyOnUse)
         {
-            Destroy(other.transform.parent.gameObject);   
+            Destroy(other.gameObject);   
         }
 
         if ((int)ingredient.Type == _step)
