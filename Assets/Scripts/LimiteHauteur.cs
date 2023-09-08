@@ -5,7 +5,7 @@ using UnityEngine;
 public class LimiteHauteur : MonoBehaviour
 {
     public GameObject Objet ;
-    public GameObject PointTéléportation ;
+    public GameObject PointTeleportation;
     void Start()
     {
         
@@ -14,9 +14,9 @@ public class LimiteHauteur : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Objet.transform.position.y < 0.5)
+        if (Objet.transform.position.y < 0)
         {
-            Objet.transform.position= PointTéléportation.transform.position;   
+            Objet.transform.position= PointTeleportation.transform.position;   
         }
     }
 }

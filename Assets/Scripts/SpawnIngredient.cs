@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class SpawnIngrédient : MonoBehaviour
+public class SpawnIngredient : MonoBehaviour
 {
     public GameObject Fruit1;
     public GameObject Fruit2;
