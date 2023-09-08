@@ -14,7 +14,7 @@ public class PanelFin : MonoBehaviour
     {
         if (Bowl.IngredientsInGoodOrder == true)
         {
-            titreJoueur += "Cuisinier /";
+            titreJoueur += "Bon Cuisinier /";
         }
         if (Bowl.IngredientsInGoodOrder == false)
         {
