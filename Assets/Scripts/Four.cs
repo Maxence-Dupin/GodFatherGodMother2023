@@ -11,6 +11,7 @@ public class Four : MonoBehaviour
     [SerializeField] private BoxCollider _bowlCollision;
     [SerializeField] private Transform _bowlInTransform;
     [SerializeField] private SkinnedMeshRenderer _fourSMR;
+    [SerializeField] private GameObject _fourExplosion;
 
     [SerializeField] AudioClip FourClose;
     [SerializeField] AudioClip FourOpen;
@@ -22,6 +23,7 @@ public class Four : MonoBehaviour
     private bool open;
     
     [SerializeField] private int _timeBeforeFire = 20;
+    [SerializeField] private int _timeBeforeExplosion = 30;
 
     [SerializeField] private GameObject _fire;
 
@@ -32,6 +34,7 @@ public class Four : MonoBehaviour
     private bool _bowlIn;
     private bool _closed = true;
     private bool _onFire;
+    private bool _exploded;
 
     private bool _SFXEnd;
     private float _timer;
@@ -84,6 +87,11 @@ public class Four : MonoBehaviour
         {
             _onFire = true;
             _fire.SetActive(true);
+        }
+        if (_timer > _timeBeforeExplosion && !_exploded)
+        {
+            _exploded = true;
+            _fourExplosion.SetActive(true);
         }
 
         if (Input.GetKeyDown(InputManager.Instance.BlueButton) && _onFire)

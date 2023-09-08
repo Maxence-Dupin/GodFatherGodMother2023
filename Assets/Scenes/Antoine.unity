@@ -1890,6 +1890,10 @@ PrefabInstance:
       propertyPath: _bowlCollision
       value: 
       objectReference: {fileID: 1024668579}
+    - target: {fileID: 6384094225182657744, guid: 3d681363463f0cb43b768871b4cb30af, type: 3}
+      propertyPath: _fourExplosion
+      value: 
+      objectReference: {fileID: 1272259352}
     - target: {fileID: 8000317476582839855, guid: 3d681363463f0cb43b768871b4cb30af, type: 3}
       propertyPath: m_Name
       value: Four
@@ -2892,6 +2896,11 @@ PrefabInstance:
 --- !u!4 &1272259351 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6100990507756066275, guid: a6a069ca0df655849ac73b2c06998e27, type: 3}
+  m_PrefabInstance: {fileID: 1272259350}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1272259352 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8210370414128099694, guid: a6a069ca0df655849ac73b2c06998e27, type: 3}
   m_PrefabInstance: {fileID: 1272259350}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1278090028
