@@ -80,7 +80,7 @@ public class Pickup : MonoBehaviour
         if (other.CompareTag("Bowl"))
         {
             bowl = true;
-            if (whisk) 
+            if (whisk && heldObject.CompareTag("Whisk")) 
             {
                 if (_leftArm)
                     minigame.StartMix(true);
@@ -93,7 +93,7 @@ public class Pickup : MonoBehaviour
         if (other.CompareTag("Whisk"))
         {
             whisk = true;
-            if (bowl) 
+            if (bowl && heldObject.CompareTag("Bowl")) 
             {
                 if (_leftArm)
                     minigame.StartMix(true);
