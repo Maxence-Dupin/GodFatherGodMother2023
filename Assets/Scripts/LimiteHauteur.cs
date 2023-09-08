@@ -14,7 +14,7 @@ public class LimiteHauteur : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Objet.transform.position.y < 0.5)
+        if (Objet.transform.position.y < 0)
         {
             Objet.transform.position= PointTeleportation.transform.position;   
         }
