@@ -90,10 +90,9 @@ public class Pickup : MonoBehaviour
     {
         if (other.CompareTag("HandRight") || other.CompareTag("HandLeft"))
         {
-            Debug.Log("Arm");
             if (whisk && otherArm.bowl || bowl && otherArm.whisk)
             {
-                if (_leftArm)
+                if (_leftArm && bowl)
                     minigame.StartMix(true);
                 else
                     minigame.StartMix(false);
