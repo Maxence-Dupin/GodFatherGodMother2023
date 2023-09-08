@@ -1462,6 +1462,10 @@ PrefabInstance:
       propertyPath: _bowlTrigger
       value: 
       objectReference: {fileID: 663875516}
+    - target: {fileID: 6384094225182657744, guid: 3d681363463f0cb43b768871b4cb30af, type: 3}
+      propertyPath: _bowlCollision
+      value: 
+      objectReference: {fileID: 1024668579}
     - target: {fileID: 8000317476582839855, guid: 3d681363463f0cb43b768871b4cb30af, type: 3}
       propertyPath: m_Name
       value: Four
@@ -1735,6 +1739,11 @@ MonoBehaviour:
 --- !u!54 &1024668578 stripped
 Rigidbody:
   m_CorrespondingSourceObject: {fileID: 3242074270041874020, guid: 7fb40896a4f958443a6697bb674577e7, type: 3}
+  m_PrefabInstance: {fileID: 262542504}
+  m_PrefabAsset: {fileID: 0}
+--- !u!65 &1024668579 stripped
+BoxCollider:
+  m_CorrespondingSourceObject: {fileID: 5979430256940391752, guid: 7fb40896a4f958443a6697bb674577e7, type: 3}
   m_PrefabInstance: {fileID: 262542504}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &1084739625 stripped

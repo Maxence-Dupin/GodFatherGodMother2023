@@ -7,7 +7,7 @@ public class Play : MonoBehaviour
     public void SceneLoadPlay()
     {
 
-        SceneManager.LoadScene("SampleScene");
+        SceneManager.LoadScene("Antoine");
         RecetteFini.FinRecette = false;
     }
 }
