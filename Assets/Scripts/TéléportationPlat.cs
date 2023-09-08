@@ -5,10 +5,10 @@ using UnityEngine;
 public class TéléportationPlat : MonoBehaviour
 {
     // Start is called before the first frame update
-    public RecetteFini RecetteFini;
+    public GameObject canva;
     void Start()
     {
-        
+        canva.SetActive(false);
     }
     public void OnTriggerEnter(Collider collider)
     {
@@ -16,8 +16,7 @@ public class TéléportationPlat : MonoBehaviour
         IEnumerator EndGame()
         {
             yield return new WaitForSeconds(5);
-            RecetteFini.FinRecette = true;
-            
+            canva.SetActive(true);
         }
     }
     // Update is called once per frame

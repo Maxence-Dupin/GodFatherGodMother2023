@@ -2,19 +2,40 @@ using UnityEngine;
 
 public class PanelFin : MonoBehaviour
 {
-    [SerializeField] private GameObject Canva;
-    
+    [SerializeField] Bowl Bowl;
+    [SerializeField] TitreJoueur TitreJoueur;
     public RecetteFini RecetteFini;
+    public string titreJoueur;
     void Start()
     {
-        Canva.SetActive(false);
+
     }
-    
-    void Update()
+    private void OnEnable()
     {
-        if (RecetteFini.FinRecette==true)
+        if (Bowl.IngredientsInGoodOrder == true)
         {
-            Canva.SetActive(true);
+            titreJoueur += "Cuisinier /";
         }
-    }
+        if (Bowl.IngredientsInGoodOrder == false)
+        {
+            titreJoueur += "Cuisinier Improvisé /";
+        }
+        if (Bowl.MelangeageReussi == true)
+        {
+            titreJoueur += "Cuisinier étoilé /";
+        }
+        if (Bowl.MelangeageReussi == false)
+        {
+            titreJoueur += "Cuisinier amateur /";
+        }
+        if (Bowl.CuissonReussi == true)
+        {
+            titreJoueur += "Cuisinier parfait";
+        }
+        if (Bowl.CuissonReussi == false)
+        {
+            titreJoueur += "Pyromane";
+        }
+        TitreJoueur.NomJoueur(titreJoueur);
+    } 
 }
