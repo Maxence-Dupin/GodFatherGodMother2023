@@ -14,6 +14,10 @@ public class Minigame : MonoBehaviour
     public DeplacementBrasDroit droit;
     public DeplacementBrasGauche gauche;
 
+    [SerializeField] AudioClip Win;
+    [SerializeField] AudioClip Loose;
+
+
     private bool playerLeft, countdownStart, up, left, right, down = false;
 
     private float countdown = 10.0f;
@@ -141,15 +145,18 @@ public class Minigame : MonoBehaviour
         //win
         if (slider.value >= 100)
         {
+            AudioManager.Instance.ChangerAudio(Win);
             countdownStart = false;
             droit.GetComponent<DeplacementBrasDroit>().enabled = true;
             gauche.GetComponent<DeplacementBrasGauche>().enabled = true;
             ui.SetActive(false);
+
         }
 
         //fail
         if ((countdown <= 0 || sliderBalance.value <= 0 || sliderBalance.value >= 100) && countdownStart)
         {
+            AudioManager.Instance.ChangerAudio(Loose);
             countdownStart = false;
             droit.GetComponent<DeplacementBrasDroit>().enabled = true;
             gauche.GetComponent<DeplacementBrasGauche>().enabled = true;

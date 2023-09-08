@@ -1950,6 +1950,14 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5063169618814965703, guid: 8ad310fc76db5b0409195a19bb17d90f, type: 3}
+      propertyPath: Win
+      value: 
+      objectReference: {fileID: 8300000, guid: 599f56dee922799498b6875889053732, type: 3}
+    - target: {fileID: 5063169618814965703, guid: 8ad310fc76db5b0409195a19bb17d90f, type: 3}
+      propertyPath: Loose
+      value: 
+      objectReference: {fileID: 8300000, guid: 055a967c22e0f1541b860734fb2146e7, type: 3}
+    - target: {fileID: 5063169618814965703, guid: 8ad310fc76db5b0409195a19bb17d90f, type: 3}
       propertyPath: droit
       value: 
       objectReference: {fileID: 701166720}
