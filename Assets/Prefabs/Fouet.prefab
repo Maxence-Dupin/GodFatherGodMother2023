@@ -80,7 +80,7 @@ GameObject:
   - component: {fileID: 250813955650689365}
   m_Layer: 0
   m_Name: Fouet
-  m_TagString: Untagged
+  m_TagString: Whisk
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
