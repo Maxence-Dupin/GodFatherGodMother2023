@@ -8,6 +8,7 @@ public class Four : MonoBehaviour
     [SerializeField] private Rigidbody _bowlRb;
     [SerializeField] private BoxCollider _bowlTrigger;
     [SerializeField] private Transform _bowlInTransform;
+    [SerializeField] private SkinnedMeshRenderer _fourSMR;
 
     [SerializeField] AudioClip FourClose;
     [SerializeField] AudioClip FourOpen;
@@ -27,7 +28,7 @@ public class Four : MonoBehaviour
     private bool _leftHandInTrigger;
     private bool _rightHandInTrigger;
     private bool _bowlIn;
-    private bool _closed;
+    private bool _closed = true;
     private bool _onFire;
 
     private bool _SFXEnd;
@@ -45,10 +46,12 @@ public class Four : MonoBehaviour
             if (_closed)
             {
                 AudioManager.Instance.ChangerAudio(FourClose);
+                _fourSMR.SetBlendShapeWeight(0, 100f);
             }
             else
             {
                 AudioManager.Instance.ChangerAudio(FourOpen);
+                _fourSMR.SetBlendShapeWeight(0, 0f);
             }
         }
         

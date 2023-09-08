@@ -49,11 +49,16 @@ MonoBehaviour:
   _bowlRb: {fileID: 0}
   _bowlTrigger: {fileID: 0}
   _bowlInTransform: {fileID: 8945453883081260796}
-  _bowlOutTransform: {fileID: 8398304808733573193}
+  _fourSMR: {fileID: 0}
+  FourClose: {fileID: 8300000, guid: 999457893f6970b42b9a6d28ff73c52c, type: 3}
+  FourOpen: {fileID: 8300000, guid: 3e4619228f2992049b1c9e952d77cae2, type: 3}
+  FourON: {fileID: 8300000, guid: 1153f994897ebc540be255445af42cd1, type: 3}
+  FourOFF: {fileID: 8300000, guid: 336cdb5b8052a78498b74f012eb52595, type: 3}
+  FourExplosion: {fileID: 8300000, guid: dc90824968ce30441a627ba7977238fd, type: 3}
+  FourEnd: {fileID: 8300000, guid: 32834dab380bd7a4d9d117f39eb04108, type: 3}
   _timeBeforeFire: 20
   _fire: {fileID: 0}
-  _leftHandInTrigger: 0
-  _rightHandInTrigger: 0
+  _bowlOutTransform: {fileID: 8398304808733573193}
 --- !u!65 &6276568282701909287
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -100,7 +105,7 @@ Transform:
   m_GameObject: {fileID: 2126008084487459479}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0.01, y: -0.247, z: -0.165}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
