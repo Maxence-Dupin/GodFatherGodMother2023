@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class DeplacementBrasDroit : MonoBehaviour
@@ -16,7 +14,7 @@ public class DeplacementBrasDroit : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
         if (Input.GetKey(KeyCode.Keypad8))
         {

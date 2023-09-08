@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 
 public class Four : MonoBehaviour
@@ -7,7 +8,9 @@ public class Four : MonoBehaviour
     [SerializeField] private Bowl _bowl;
     [SerializeField] private Rigidbody _bowlRb;
     [SerializeField] private BoxCollider _bowlTrigger;
+    [SerializeField] private BoxCollider _bowlCollision;
     [SerializeField] private Transform _bowlInTransform;
+    [SerializeField] private SkinnedMeshRenderer _fourSMR;
 
     [SerializeField] AudioClip FourClose;
     [SerializeField] AudioClip FourOpen;
@@ -27,7 +30,7 @@ public class Four : MonoBehaviour
     private bool _leftHandInTrigger;
     private bool _rightHandInTrigger;
     private bool _bowlIn;
-    private bool _closed;
+    private bool _closed = true;
     private bool _onFire;
 
     private bool _SFXEnd;
@@ -45,10 +48,12 @@ public class Four : MonoBehaviour
             if (_closed)
             {
                 AudioManager.Instance.ChangerAudio(FourClose);
+                _fourSMR.SetBlendShapeWeight(0, 100f);
             }
             else
             {
                 AudioManager.Instance.ChangerAudio(FourOpen);
+                _fourSMR.SetBlendShapeWeight(0, 0f);
             }
         }
         
@@ -68,9 +73,10 @@ public class Four : MonoBehaviour
               (_rightHandInTrigger && Input.GetKeyDown(InputManager.Instance.RightJoystickButton1) )))
         {
             _bowlRb.transform.position = _bowlOutTransform.position;
-            _bowlRb.isKinematic = false;
-            _bowlTrigger.enabled = true;
             
+            _bowlRb.isKinematic = false;
+            StartCoroutine(WaitCollision());
+
             _bowlIn = false;
         }
 
@@ -86,6 +92,13 @@ public class Four : MonoBehaviour
         }
     }
 
+    IEnumerator WaitCollision()
+    {
+        yield return new WaitForSeconds(0.1f);
+        _bowlTrigger.enabled = true;
+        _bowlCollision.enabled = true;
+    }
+
     private void OnTriggerStay(Collider other)
     {
         if (other.GetComponent<Bowl>() && !_closed)
@@ -96,7 +109,8 @@ public class Four : MonoBehaviour
                 
                 _bowlRb.isKinematic = true;
                 _bowlTrigger.enabled = false;
-                
+                _bowlCollision.enabled = false;
+
                 _bowlIn = true;
                 _bowlRb.gameObject.transform.position = _bowlInTransform.position;
             }

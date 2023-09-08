@@ -286,6 +286,7 @@ GameObject:
   - component: {fileID: 3043795304002127028}
   - component: {fileID: 4709068953343321151}
   - component: {fileID: 8694347440455234813}
+  - component: {fileID: 8954247623148245075}
   m_Layer: 0
   m_Name: Bras Droit
   m_TagString: HandRight
@@ -336,7 +337,7 @@ Rigidbody:
   m_GameObject: {fileID: 3312933394905215289}
   serializedVersion: 4
   m_Mass: 1
-  m_Drag: 5
+  m_Drag: 10
   m_AngularDrag: 0.05
   m_CenterOfMass: {x: 0, y: 0, z: 0}
   m_InertiaTensor: {x: 1, y: 1, z: 1}
@@ -368,9 +369,31 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   holdArea: {fileID: 9179749763335762084}
   _leftArm: 0
-  minigame: {fileID: 0}
+  otherArm: {fileID: 8054572781041926043}
+  minigame: {fileID: 5063169618814965703, guid: 8ad310fc76db5b0409195a19bb17d90f, type: 3}
   armRange: 1
   PickUp: {fileID: 8300000, guid: 6295f8c61c7301c4881117dcfce7061d, type: 3}
+--- !u!65 &8954247623148245075
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3312933394905215289}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.7, y: 0.7, z: 0.7}
+  m_Center: {x: 0, y: 0, z: 0.15}
 --- !u!1 &4587110401546935712
 GameObject:
   m_ObjectHideFlags: 0
@@ -414,6 +437,7 @@ GameObject:
   - component: {fileID: 2114960118338969287}
   - component: {fileID: 298829450875066437}
   - component: {fileID: 8054572781041926043}
+  - component: {fileID: 4807962374833197892}
   m_Layer: 0
   m_Name: Bras Gauche
   m_TagString: HandLeft
@@ -464,7 +488,7 @@ Rigidbody:
   m_GameObject: {fileID: 8608036983565455800}
   serializedVersion: 4
   m_Mass: 1
-  m_Drag: 5
+  m_Drag: 10
   m_AngularDrag: 0.05
   m_CenterOfMass: {x: 0, y: 0, z: 0}
   m_InertiaTensor: {x: 1, y: 1, z: 1}
@@ -496,6 +520,28 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   holdArea: {fileID: 6734635503327510772}
   _leftArm: 1
-  minigame: {fileID: 0}
+  otherArm: {fileID: 8694347440455234813}
+  minigame: {fileID: 5063169618814965703, guid: 8ad310fc76db5b0409195a19bb17d90f, type: 3}
   armRange: 1
   PickUp: {fileID: 8300000, guid: 6295f8c61c7301c4881117dcfce7061d, type: 3}
+--- !u!65 &4807962374833197892
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8608036983565455800}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.7, y: 0.7, z: 0.7}
+  m_Center: {x: 0, y: 0, z: 0.15}
