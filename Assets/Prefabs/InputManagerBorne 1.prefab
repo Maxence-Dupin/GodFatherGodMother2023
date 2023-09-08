@@ -1,0 +1,75 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &8102418404260892640
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 86853243986743408}
+  - component: {fileID: 344738808479888392}
+  m_Layer: 0
+  m_Name: InputManagerBorne 1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &86853243986743408
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8102418404260892640}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 1, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &344738808479888392
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8102418404260892640}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f7ec8d63748cac0428a564f22d5c20af, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _leftJoystickProfondeurUp: 117
+  _leftJoystickProfondeurBottom: 104
+  _leftJoystickUp: 113
+  _leftJoystickBottom: 119
+  _leftJoystickLeft: 114
+  _leftJoystickRight: 101
+  _rightJoystickProfondeurUp: 97
+  _rightJoystickProfondeurBottom: 115
+  _rightJoystickUp: 98
+  _rightJoystickBottom: 121
+  _rightJoystickLeft: 110
+  _rightJoystickRight: 256
+  _leftJoystickButton1: 116
+  _leftJoystickButton2: 121
+  _rightJoystickButton1: 257
+  _rightJoystickButton2: 258
+  _middleButton: 0
+  _upArrow: 0
+  _bottomArrow: 0
+  _leftArrow: 0
+  _rightArrow: 0
+  _redButton: 265
+  _blueButton: 32
+  _button1_1: 260
+  _button1_2: 261
+  _button1_3: 264
+  _button2_1: 262
+  _button2_2: 259
+  _button2_3: 263
