@@ -53,7 +53,7 @@ MonoBehaviour:
   _bottomArrow: 0
   _leftArrow: 0
   _rightArrow: 0
-  _redButton: 0
+  _redButton: 101
   _blueButton: 0
   _button1_1: 257
   _button1_2: 258
